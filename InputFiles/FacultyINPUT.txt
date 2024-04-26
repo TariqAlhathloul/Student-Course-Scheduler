@@ -1,12 +1,3 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2761
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww25400\viewh15440\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-
-\f0\fs24 \cf0 \
-\
 1. Ahmed Hassan, 987654, Computer Science, January 15, 2010, +966 50 987 6543, ahmed.hassan@university.edu\
 2. Mahmoud Ibrahim, 765432, Engineering, June 5, 2012, +966 50 765 4321, mahmoud.ibrahim@university.edu\
 3. Youssef Abdullah, 543210, Physics, November 25, 2013, +966 50 543 2109, youssef.abdullah@university.edu\
@@ -17,4 +8,3 @@
 8. Ibrahim Youssef, 456789, Chemistry, April 30, 2017, +966 50 456 7890, ibrahim.youssef@university.edu\
 9. Hassan Ahmed, 567890, Literature, May 8, 2014, +966 50 567 8901, hassan.ahmed@university.edu\
 10. Abdul Rahman Omar, 678901, Psychology, October 18, 2011, +966 50 678 9012, abdulrahman.omar@university.edu\
-}

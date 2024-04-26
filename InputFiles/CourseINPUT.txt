@@ -1,0 +1,49 @@
+(course code, courseName, credit hours, prerequisite)\
+Computer Science Courses:\
+\
+1. CS001, Computer Essentials, 3 credits, None\
+2. IT232, Object Oriented Programming, 3 credits, CS001\
+3. MATH150, Discrete Mathematics, 3 credits, MATH001\
+4. SCI101, General Physics 1, 4 credits, MATH001\
+5. IT241, Operating Systems, 3 credits, IT232\
+6. IT244, Introduction to Database, 3 credits, IT232\
+7. IT245, Data Structure, 3 credits, IT232\
+8. IT351, Computer Networks, 3 credits, IT232\
+9. STAT101, Statistics, 3 credits, MATH001\
+10. IT499, Practical Training, 3 credits, Completion of Lower Division Requirements\
+\
+General Education Courses:\
+\
+1. ENG001, English Language Skills, 3 credits, None\
+2. CI001, Academic Skills, 3 credits, None\
+3. MATH001, Fundamentals of Mathematics, 3 credits, None\
+4. COMM001, Communication Skills, 3 credits, None\
+5. ENG103, Technical Writing, 3 credits, ENG001\
+6. MATH251, Linear Algebra, 3 credits, MATH150\
+7. SCI201, General Physics 2, 4 credits, SCI101\
+\
+Islamic Studies Courses:\
+\
+1. ISLM101, Islamic Faith, 3 credits, None\
+2. ISLM102, Professional Conduct & Ethics in Islam, 3 credits, ISLM101\
+3. ISLM103, Islamic Economic System, 3 credits, ISLM101\
+4. ISLM104, Islamic Social System, 3 credits, ISLM101\
+\
+Information Technology and Information Systems Courses:\
+\
+1. IT231, Introduction to IT and IS, 3 credits, None\
+2. IT233, Computer Organization, 3 credits, IT232\
+3. IT352, Human Computer Interaction, 3 credits, IT233\
+4. IT353, System Analysis and Design, 3 credits, IT233\
+5. IT354, Database Management Systems, 3 credits, IT244\
+6. IT361, Web Technologies, 3 credits, IT244\
+7. IT362, IT Project Management, 3 credits, IT244\
+8. IT363, Network Management, 3 credits, IT351\
+9. IT364, IT Entrepreneurship and Innovation, 3 credits, IT244\
+10. IT365, Enterprise Systems, 3 credits, IT244\
+11. IT475, Decision Support Systems, 3 credits, IT354\
+12. IT476, IT Security & Policies, 3 credits, IT244\
+13. IT485, Professional Ethics in IT, 3 credits, None\
+14. IT487, Mobile Application Development, 3 credits, IT244\
+15. IT479, Senior Project I, 3 credits, Completion of Core Requirements\
+16. IT489, Senior Project II, 3 credits, IT479

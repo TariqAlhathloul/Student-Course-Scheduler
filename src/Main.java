@@ -1,5 +1,5 @@
 import java.util.*;
-
+import java.io.*;
 /*
 * subject: IT-245 Project.
 * student name: Tariq Hassan.
@@ -9,7 +9,7 @@ import java.util.*;
 * */
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Map<String, Course> courses = new HashMap<>();
         courses.put("CSC101", new Course("CSC101", new ArrayList<>(), 2));
         courses.put("CSC102", new Course("CSC102", Collections.singletonList("CSC101"), 3));
