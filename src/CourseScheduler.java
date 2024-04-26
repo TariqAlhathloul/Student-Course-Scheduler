@@ -1,29 +1,17 @@
 import java.util.*;
 
-class Course {
-
-    // for both students and faculty
-    String firstName;
-    String lastName;
-    String id;
-    String birthDate;
-    String email;
-    String phoneNumber;
-    String city;
-    String zipCode;
-    //for students
-    double GPA;
-
-    // for faculty
-    String hireDate;
+class Course extends UniversityMembers{
 
     // for course
-    int hours;
-    String description;
-    String Department;
-    int max;
-    int crn;
+    private int hours;
+    private String description;
+    private String department;
+    private int max;
+    private int crn;
 
+    private final String studentINPUT = "InputFiles/STUDENTSINPUT.txt";
+    private final String facultyINPUT = "InputFiles/FacultyINPUT.txt";
+    private final String courseINPUT = "InputFiles/CourseINPUT.txt";
 
     List<String> prerequisites;
 
@@ -43,7 +31,7 @@ class Course {
             "\npress 2 to View My Course List" +
             "\npress 3 to View My Information" +
             "\npress 4 to Enroll myself to a Course" +
-            "\npress 5 to Unroll myself from a Course";;
+            "\npress 5 to Unroll myself from a Course";
     final String courseDescription = "";
     final String facultyMessage =   "\n----------------------------" +
             "\nYOU ARE LOGGED IN AS FACULTY" +
@@ -62,7 +50,7 @@ class Course {
         this.duration = duration;
     }
 }
-class CourseScheduler {
+class CourseScheduler extends UniversityMembers{
 
     public static Map<String, String> scheduleCourses(Map<String, Course> courses, Map<String, List<String>> studentAvailability) {
         Map<String, String> schedule = new HashMap<>();
