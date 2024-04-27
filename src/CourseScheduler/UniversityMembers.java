@@ -3,27 +3,27 @@ package CourseScheduler;
 class UniversityMembers {
     // common attributes
     // for both students and faculty
-     String firstName;
-     String lastName;
-    String id;
-    String birthDate;
-    String email;
-    String phoneNumber;
-    String city;
-    String zipCode;
-    String startDate;
+     private String firstName;
+    private String lastName;
+    private String id;
+    private String birthDate;
+    private String email;
+    private String phoneNumber;
+    private String city;
+    private String zipCode;
+    private String startDate;
 
     // constructor
     public UniversityMembers(){
-        setFirstName("");
-        setLastName("");
-        setId("");
-        setBirthDate("");
-        setEmail("");
-        setPhoneNumber("");
-        setCity("");
-        setZipCode("");
-        setStartDate("");
+        this.firstName = getFirstName();
+        this.lastName = getLastName();
+        this.id = getId();
+        this.birthDate = getBirthDate();
+        this.email = getEmail();
+        this.phoneNumber = getPhoneNumber();
+        this.city = getCity();
+        this.zipCode = getZipCode();
+        this.startDate = getStartDate();
     }
 
     // setters methods

@@ -21,10 +21,10 @@ public class Main extends Course {
     }
 
     public static void main(String[] args) throws IOException {
-
+        UniversityMembers universityMembers = new UniversityMembers();
         Courses newCourse = new Courses();
-        int logInOption = 0;
         Scanner input = new Scanner(System.in);
+        int logInOption = 0;
 
         System.out.println(Course.welcomeMessage);
         logInOption = input.nextInt();
@@ -33,45 +33,30 @@ public class Main extends Course {
 
             switch (logInOption) {
                 case 1 -> {
-                    System.out.println(Course.studentMessage);
-                    while (logInOption != 0) {
-                        System.out.println();
-                        System.out.println("Enter you information in the following format:");
 
-                        // set the student information
-                        UniversityMembers student = new UniversityMembers();
-                        System.out.println("Enter your Information:");
-                        System.out.println("first name:");
-                        student.setFirstName(input.next());
-                        System.out.println("last name:");
-                        student.setLastName(input.next());
-                        System.out.println("id");
-                        student.setId(input.next());
-                        System.out.println("birth date: ");
-                        student.setBirthDate(input.next());
-                        System.out.println("email: ");
-                        student.setEmail(input.next());
-                        System.out.println("phone number: ");
-                        student.setPhoneNumber(input.next());
-                        System.out.println("city: ");
-                        student.setCity(input.next());
-                        System.out.println("zip code: ");
-                        student.setZipCode(input.next());
-                        System.out.println("start date: ");
-                        student.setStartDate(input.next());
+                    System.out.println();
+                    System.out.println(Course.studentMessage);
+                        Student student = new Student();
+                        student.studentINFO();
                         logInOption = input.nextInt();
+                        while (logInOption != 0) {
+                            logInOption = input.nextInt();
                         switch (logInOption) {
+
                             case 1 -> {
                                 System.out.println("View Course Schedule");
                                 break;
                             }
                             case 2 -> {
-                                System.out.println("View My Course List");
+                                System.out.println("View Available Courses");
+                                Courses courses = new Courses();
+                                courses.displayCourses();
                                 break;
                             }
                             case 3 -> {
                                 System.out.println("View My Information");
-                                student.display();
+                                student.displayStudent();
+
                                 break;
                             }
                             case 4 -> {
@@ -91,11 +76,17 @@ public class Main extends Course {
                                 break;
                             }
                         }
+                        System.out.println(Course.studentMessage);
+
                     }
                     break;
                 }
                 case 2 -> {
                     System.out.println(Course.facultyMessage);
+                    System.out.println();
+                    Faculty faculty = new Faculty();
+                    faculty.facultyINFO();
+                    logInOption = input.nextInt();
                     while (logInOption != 0) {
                         logInOption = input.nextInt();
                         switch (logInOption) {
@@ -105,10 +96,14 @@ public class Main extends Course {
                             }
                             case 2 -> {
                                 System.out.println("View My Course List");
+                                Courses courses = new Courses();
+                                courses.displayCourses();
                                 break;
                             }
                             case 3 -> {
                                 System.out.println("View My Information");
+                                universityMembers.display();
+
                                 break;
                             }
                             case 4 -> {

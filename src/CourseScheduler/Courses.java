@@ -9,15 +9,10 @@ public class Courses {
     private String CourseDescription;
     private String CourseDepartment;
 
-    //read from file
 
-
-    public Courses() {
-        System.out.println("CourseINPUT: ");
-    }
-    public static void main(String[] args) {
+    public void displayCourses(){
         File courseFile = new File("InputFiles/CourseINPUT.txt");
-        Scanner courseScanner = null;
+        Scanner courseScanner;
         try {
             courseScanner = new Scanner(courseFile);
         } catch (FileNotFoundException e) {
@@ -27,6 +22,5 @@ public class Courses {
             String data = courseScanner.nextLine();
             System.out.println(data);
         }
-        Courses course = new Courses();
     }
 }

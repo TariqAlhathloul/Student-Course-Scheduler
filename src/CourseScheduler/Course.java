@@ -49,9 +49,11 @@ class Course extends UniversityMembers {
     int duration;
 
         // constructor
-    public Course(String id, List < String > prerequisites, int duration){
-        this.id = id;
+    public Course(List < String > prerequisites, int duration){
         this.prerequisites = prerequisites;
         this.duration = duration;
     }
+
+    public Course(String courseID, List<String> strings, int courseDuration) {
     }
+}

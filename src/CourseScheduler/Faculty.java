@@ -7,34 +7,54 @@ class Faculty extends UniversityMembers {
     private String officeHours;
     // faculty department
     private int facultyCount;
+
     // constructor
     public Faculty(){
         facultyCount ++;
     }
 
+    public void setOfficeHours(String officeHours) {
+        this.officeHours = officeHours;
+    }
+
     // method to set the faculty count
     Scanner input = new Scanner(System.in);
-    UniversityMembers faculty = new UniversityMembers();
 
     // method to set the faculty information
-    public void studentINFO() {
+    public void facultyINFO() {
         System.out.println("Enter your Information:");
         System.out.println("first name:");
-        faculty.setFirstName(input.next());
+        setFirstName(input.next());
         System.out.println("last name:");
-        faculty.setLastName(input.next());
+        setLastName(input.next());
         System.out.println("id");
-        faculty.setId(input.next());
+        setId(input.next());
+        System.out.println("office hours: ");
+        setOfficeHours(input.next());
         System.out.println("birth date: ");
-        faculty.setBirthDate(input.next());
+        setBirthDate(input.next());
         System.out.println("email: ");
-        faculty.setEmail(input.next());
+        setEmail(input.next());
         System.out.println("phone number: ");
-        faculty.setPhoneNumber(input.next());
+        setPhoneNumber(input.next());
         System.out.println("city: ");
-        faculty.setCity(input.next());
+        setCity(input.next());
         System.out.println("zip code: ");
-        faculty.setZipCode(input.next());
+        setZipCode(input.next());
         System.out.println("start date: ");
+    }
+
+    // method to display the faculty information
+    public void displayFaculty(){
+        System.out.println("First Name: " + getFirstName());
+        System.out.println("Last Name: " + getLastName());
+        System.out.println("ID: " + getId());
+        System.out.println("Office Hours: " + officeHours);
+        System.out.println("Birth Date: " + getBirthDate());
+        System.out.println("Email: " + getEmail());
+        System.out.println("Phone Number: " + getPhoneNumber());
+        System.out.println("City: " + getCity());
+        System.out.println("Zip Code: " + getZipCode());
+        System.out.println("Start Date: " + getStartDate());
     }
 }
