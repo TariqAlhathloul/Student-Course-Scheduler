@@ -1,7 +1,9 @@
-class Student extends UniversityMembers{
+package CourseScheduler;
 
-    double GPA;
-    int studentCount;
+class Student extends UniversityMembers {
+
+    private double GPA;
+    private int studentCount;
     public Student(){
         studentCount ++;
     }

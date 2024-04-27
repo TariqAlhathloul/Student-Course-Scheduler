@@ -1,3 +1,5 @@
+package CourseScheduler;
+
 class UniversityMembers {
     // common attributes
     // for both students and faculty
