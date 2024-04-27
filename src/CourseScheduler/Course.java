@@ -40,7 +40,6 @@ class Course extends UniversityMembers {
 
     private final String studentINPUT = "InputFiles/STUDENTSINPUT.txt";
     private final String facultyINPUT = "InputFiles/FacultyINPUT.txt";
-    private final String courseINPUT = "InputFiles/CourseINPUT.txt";
 
 
     // for course

@@ -20,7 +20,9 @@ public class Main extends Course {
         super(id, prerequisites, duration);
     }
 
-    public static void main(String[] args) throws IOException, extends UniversityMembers {
+    public static void main(String[] args) throws IOException {
+
+        Courses newCourse = new Courses();
         int logInOption = 0;
         Scanner input = new Scanner(System.in);
 
@@ -28,23 +30,36 @@ public class Main extends Course {
         logInOption = input.nextInt();
 
         while (logInOption != 0) {
+
             switch (logInOption) {
                 case 1 -> {
                     System.out.println(Course.studentMessage);
                     while (logInOption != 0) {
-                        logInOption = input.nextInt();
                         System.out.println();
                         System.out.println("Enter you information in the following format:");
-                        System.out.println("First Name, Last Name, ID, Birth Date, Email, Phone Number, City, Zip Code, Start Date");
-                        firstName = input.next();
-                        lastName = input.next();
-                        id = input.next();
-                        birthDate = input.next();
-                        email = input.next();
-                        phoneNumber = input.next();
-                        city = input.next();
-                        zipCode = input.next();
-                        startDate = input.next();
+
+                        // set the student information
+                        UniversityMembers student = new UniversityMembers();
+                        System.out.println("Enter your Information:");
+                        System.out.println("first name:");
+                        student.setFirstName(input.next());
+                        System.out.println("last name:");
+                        student.setLastName(input.next());
+                        System.out.println("id");
+                        student.setId(input.next());
+                        System.out.println("birth date: ");
+                        student.setBirthDate(input.next());
+                        System.out.println("email: ");
+                        student.setEmail(input.next());
+                        System.out.println("phone number: ");
+                        student.setPhoneNumber(input.next());
+                        System.out.println("city: ");
+                        student.setCity(input.next());
+                        System.out.println("zip code: ");
+                        student.setZipCode(input.next());
+                        System.out.println("start date: ");
+                        student.setStartDate(input.next());
+                        logInOption = input.nextInt();
                         switch (logInOption) {
                             case 1 -> {
                                 System.out.println("View Course Schedule");
@@ -56,7 +71,7 @@ public class Main extends Course {
                             }
                             case 3 -> {
                                 System.out.println("View My Information");
-
+                                student.display();
                                 break;
                             }
                             case 4 -> {
@@ -126,13 +141,14 @@ public class Main extends Course {
             }
 
             }
-//        CourseScheduler courseScheduler = new CourseScheduler();
-//        courseScheduler.registerCourse();
         }
     }
 }
 
 
+//{
+//        //        CourseScheduler courseScheduler = new CourseScheduler();
+////        courseScheduler.registerCourse();
 //        Map<String, Course> courses = new HashMap<>();
 //        courses.put("CSC101", new Course("CSC101", new ArrayList<>(), 2));
 //        courses.put("CSC102", new Course("CSC102", Collections.singletonList("CSC101"), 3));
@@ -159,3 +175,4 @@ public class Main extends Course {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
+//    }
