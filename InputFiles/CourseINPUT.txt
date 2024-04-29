@@ -1,6 +1,8 @@
-(course code, courseName, credit hours, prerequisite)\
-Computer Science Courses:\
-\
+
+
+(course code, courseName, credit hours, prerequisite)
+Department of Computer Science:
+
 1. CS001, Computer Essentials, 3 credits, None\
 2. IT232, Object Oriented Programming, 3 credits, CS001\
 3. MATH150, Discrete Mathematics, 3 credits, MATH001\
@@ -11,9 +13,9 @@ Computer Science Courses:\
 8. IT351, Computer Networks, 3 credits, IT232\
 9. STAT101, Statistics, 3 credits, MATH001\
 10. IT499, Practical Training, 3 credits, Completion of Lower Division Requirements\
-\
-General Education Courses:\
-\
+
+Department of General Education Courses:
+
 1. ENG001, English Language Skills, 3 credits, None\
 2. CI001, Academic Skills, 3 credits, None\
 3. MATH001, Fundamentals of Mathematics, 3 credits, None\
@@ -21,16 +23,17 @@ General Education Courses:\
 5. ENG103, Technical Writing, 3 credits, ENG001\
 6. MATH251, Linear Algebra, 3 credits, MATH150\
 7. SCI201, General Physics 2, 4 credits, SCI101\
-\
-Islamic Studies Courses:\
-\
+
+Department of Islamic Studies Courses:
+
 1. ISLM101, Islamic Faith, 3 credits, None\
 2. ISLM102, Professional Conduct & Ethics in Islam, 3 credits, ISLM101\
 3. ISLM103, Islamic Economic System, 3 credits, ISLM101\
 4. ISLM104, Islamic Social System, 3 credits, ISLM101\
-\
-Information Technology and Information Systems Courses:\
-\
+
+
+Department of Information Technology and Information Systems Courses:\
+
 1. IT231, Introduction to IT and IS, 3 credits, None\
 2. IT233, Computer Organization, 3 credits, IT232\
 3. IT352, Human Computer Interaction, 3 credits, IT233\

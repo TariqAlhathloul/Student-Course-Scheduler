@@ -16,6 +16,8 @@ class Student extends UniversityMembers {
         return GPA;
     }
 
+    private final String studentINPUT = "InputFiles/STUDENTSINPUT.txt";
+
     // method to set the student information
     public void studentINFO() {
             System.out.println("Enter your Information:");

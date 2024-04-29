@@ -7,6 +7,7 @@ class Faculty extends UniversityMembers {
     private String officeHours;
     // faculty department
     private int facultyCount;
+    private final String facultyINPUT = "InputFiles/FacultyINPUT.txt";
 
     // constructor
     public Faculty(){

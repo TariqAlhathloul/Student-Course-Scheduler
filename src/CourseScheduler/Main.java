@@ -1,10 +1,9 @@
 package CourseScheduler;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
 import java.io.*;
 import java.util.Scanner;
+
 /*
 * subject: IT-245 Project.
 * student name: Tariq Hassan.
@@ -21,12 +20,10 @@ public class Main extends Course {
     }
 
     public static void main(String[] args) throws IOException {
-        UniversityMembers universityMembers = new UniversityMembers();
-        Courses newCourse = new Courses();
         Scanner input = new Scanner(System.in);
         int logInOption = 0;
 
-        System.out.println(Course.welcomeMessage);
+        System.out.println(Messages.welcomeMessage);
         logInOption = input.nextInt();
 
         while (logInOption != 0) {
@@ -35,7 +32,7 @@ public class Main extends Course {
                 case 1 -> {
 
                     System.out.println();
-                    System.out.println(Course.studentMessage);
+                    System.out.println(Messages.studentMessage);
                         Student student = new Student();
                         student.studentINFO();
                         logInOption = input.nextInt();
@@ -56,7 +53,6 @@ public class Main extends Course {
                             case 3 -> {
                                 System.out.println("View My Information");
                                 student.displayStudent();
-
                                 break;
                             }
                             case 4 -> {
@@ -76,13 +72,14 @@ public class Main extends Course {
                                 break;
                             }
                         }
-                        System.out.println(Course.studentMessage);
+                        System.out.println(Messages.studentMessage);
 
                     }
                     break;
                 }
+                /* Faculty LogIN */
                 case 2 -> {
-                    System.out.println(Course.facultyMessage);
+                    System.out.println(Messages.facultyMessage);
                     System.out.println();
                     Faculty faculty = new Faculty();
                     faculty.facultyINFO();
@@ -102,7 +99,7 @@ public class Main extends Course {
                             }
                             case 3 -> {
                                 System.out.println("View My Information");
-                                universityMembers.display();
+                                faculty.displayFaculty();
 
                                 break;
                             }

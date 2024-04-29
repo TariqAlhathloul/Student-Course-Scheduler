@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class Courses {
 
     private String CourseName;
-    private String CourseID;
-    private String CourseDescription;
+    private String CourseCode;
+    private String prerequisite;
+    private String creditHours;
     private String CourseDepartment;
 
 
