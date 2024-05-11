@@ -29,9 +29,6 @@ public class Main extends Course {
      * @param prerequisites The list of prerequisites for the course.
      * @param duration The duration of the course.
      */
-    public Main(String id, List<String> prerequisites, int duration) {
-        super(id, prerequisites, duration);
-    }
 
     /**
      * This is the main method for the application.
@@ -68,8 +65,8 @@ public class Main extends Course {
                             // View available courses
                             case 2 -> {
                                 System.out.println("View Available Courses");
-                                Courses courses = new Courses();
-                                courses.displayCourses();
+                                Course course = new Course();
+                                course.displayCourses();
                                 break;
                             }
                             // View student information
@@ -121,8 +118,8 @@ public class Main extends Course {
                             // View faculty's course list
                             case 2 -> {
                                 System.out.println("View My Course List");
-                                Courses courses = new Courses();
-                                courses.displayCourses();
+                                Course course = new Course();
+                                course.displayCourses();
                                 break;
                             }
                             // View faculty information

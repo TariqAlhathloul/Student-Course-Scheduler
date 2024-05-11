@@ -1,3 +1,4 @@
+/*
 package CourseScheduler;
 import java.util.*;
 import java.util.Scanner;
@@ -48,14 +49,4 @@ class CourseScheduler extends UniversityMembers {
         int courseDuration = scanner.nextInt();
         Course course = new Course(courseID, Collections.singletonList(coursePrerequisites), courseDuration);
     }
-
-    // method to check if a course can be taken
-    private static boolean canTakeCourse(Course course, Set<String> scheduledCourses) {
-        for (String prerequisite : course.prerequisites) {
-            if (!scheduledCourses.contains(prerequisite)) {
-                return false;
-            }
-        }
-        return true;
-    }
-}
+    */
