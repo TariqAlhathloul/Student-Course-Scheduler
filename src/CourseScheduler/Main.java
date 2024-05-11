@@ -19,7 +19,9 @@ import java.util.Scanner;
  * The main method handles the user interface and user input for the application.
  * It allows users to log in as a student or faculty member and perform various actions.
  */
-public class Main extends Course {
+
+// extends Course class
+public class Main{
     Scanner input = new Scanner(System.in);
 
     /**
@@ -65,8 +67,8 @@ public class Main extends Course {
                             // View available courses
                             case 2 -> {
                                 System.out.println("View Available Courses");
-                                Course course = new Course();
-                                course.displayCourses();
+                                //Course course = new Course();
+                                //course.displayCourses();
                                 break;
                             }
                             // View student information
@@ -118,8 +120,8 @@ public class Main extends Course {
                             // View faculty's course list
                             case 2 -> {
                                 System.out.println("View My Course List");
-                                Course course = new Course();
-                                course.displayCourses();
+                                //Course course = new Course();
+                                //course.displayCourses();
                                 break;
                             }
                             // View faculty information
