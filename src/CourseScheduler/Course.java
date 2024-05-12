@@ -1,5 +1,7 @@
 package CourseScheduler;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -107,6 +109,27 @@ public void setPrerequisite(String prerequisite) {
         });
 
     }
+
+        private List<Course> enrolledCourses = new ArrayList<>();
+    
+        public void enrollCourse(Course course) {
+            enrolledCourses.add(course);
+            System.out.println("Successfully enrolled in " + course.getCourseCode());
+        }
+
+        public void unenrollCourse(Course course) {
+            enrolledCourses.remove(course);
+            System.out.println("Successfully unenrolled from " + course.getCourseCode());
+        }
+
+        public String findCourseByCode(String courseCode) {
+            for (Course course : enrolledCourses) {
+                if (course.getCourseCode().equals(courseCode)) {
+                    return courseName;
+                }
+            }
+            return null;
+        }
     public void displayCourses() {
         Map<String, Map<String, Course>> departments = CourseReader.readCourseData(filePathCourse);
         departments.forEach((department, courses) -> {

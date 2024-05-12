@@ -45,28 +45,7 @@ public class Student extends UniversityMembers {
             System.out.println("start date: ex. 01/01/2022");
             setStartDate(input.next());
         }
-
-        private List<Course> enrolledCourses = new ArrayList<>();
-    
-        public void enrollCourse(Course course) {
-            enrolledCourses.add(course);
-            System.out.println("Successfully enrolled in " + course.getCourseCode());
-        }
-
-        public void unenrollCourse(Course course) {
-            enrolledCourses.remove(course);
-            System.out.println("Successfully unenrolled from " + course.getCourseCode());
-        }
-
-        public String findCourseByCode(String courseCode) {
-            for (Course course : enrolledCourses) {
-                if (course.getCourseCode().equals(courseCode)) {
-                    return courseName;
-                }
-            }
-            return null;
-        }
-   
+           
 
     // method to display the student information
     public void displayStudent(){

@@ -52,8 +52,8 @@ public class Main{
         HashMap<String, Course> courseMap = new HashMap<>();
         HashMap<String, Faculty> facultyMap = new HashMap<>();
         HashMap<String, List<Course> > studentMap = new HashMap<>();
-
-
+        Course course = new Course();
+        
         Scanner input = new Scanner(System.in);
         int logInOption = 0;
 
@@ -96,9 +96,9 @@ public class Main{
                                 System.out.println("Enroll myself to a Course");
                                 System.out.println("Enter the course code:");
                                 String courseCode = input.next();
-                                Course courseToEnroll = findCourseByCode(courseCode); // You need to implement this method
-                                if (courseToEnroll != null) {
-                                    student.enrollCourse(courseToEnroll);
+                                Course Ecourse = courseMap.get(courseCode);
+                                if (courseCode != null) {
+                                    course.enrollCourse(Ecourse);
                                 } else {
                                     System.out.println("Course not found");
                                 }
