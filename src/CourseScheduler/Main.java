@@ -1,7 +1,8 @@
 package CourseScheduler;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.io.*;
+import java.util.List;
 import java.util.Scanner;
 
 /*
@@ -39,7 +40,16 @@ public class Main{
      * @param args The command line arguments for the application.
      * @throws IOException If an input or output exception occurred.
      */
+
+    // HashMaps to store courses, students, and their relationships
+
+
     public static void main(String[] args) throws IOException {
+        HashMap<String, Course> courseMap = new HashMap<>();
+        HashMap<String, Faculty> facultyMap = new HashMap<>();
+        HashMap<String, List<Course> > studentMap = new HashMap<>();
+
+
         Scanner input = new Scanner(System.in);
         int logInOption = 0;
 
@@ -67,8 +77,8 @@ public class Main{
                             // View available courses
                             case 2 -> {
                                 System.out.println("View Available Courses");
-                                //Course course = new Course();
-                                //course.displayCourses();
+                                Course showCourse = new Course();
+                                showCourse.displayCourses();
                                 break;
                             }
                             // View student information
@@ -80,6 +90,10 @@ public class Main{
                             // Enroll in a course
                             case 4 -> {
                                 System.out.println("Enroll myself to a Course");
+                                System.out.println("Enter the course code:");
+                                String courseCode = input.next();
+                                List<String> enrolledCourses = new ArrayList<>();
+                                enrolledCourses.add(courseCode);
                                 break;
                             }
                             // Unenroll from a course
@@ -120,8 +134,8 @@ public class Main{
                             // View faculty's course list
                             case 2 -> {
                                 System.out.println("View My Course List");
-                                //Course course = new Course();
-                                //course.displayCourses();
+                                Course showCourse = new Course();
+                                showCourse.displayCourses();
                                 break;
                             }
                             // View faculty information

@@ -1,7 +1,4 @@
 package CourseScheduler;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
 import java.io.BufferedReader;
@@ -19,6 +16,13 @@ public class Course {
         this.courseName = courseName;
         this.creditHours = creditHours;
         this.prerequisite = prerequisite;
+    }
+    // Default constructor
+    public Course() {
+        this.courseCode = "";
+        this.courseName = "";
+        this.creditHours = 0;
+        this.prerequisite = "";
     }
 
     // Getter and setter methods
@@ -102,6 +106,13 @@ public void setPrerequisite(String prerequisite) {
             courses.values().forEach(System.out::println);
         });
 
+    }
+    public void displayCourses() {
+        Map<String, Map<String, Course>> departments = CourseReader.readCourseData(filePathCourse);
+        departments.forEach((department, courses) -> {
+            System.out.println(department + " Department:");
+            courses.values().forEach(System.out::println);
+        });
     }
 
 }

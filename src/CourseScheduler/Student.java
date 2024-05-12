@@ -21,25 +21,25 @@ class Student extends UniversityMembers {
     // method to set the student information
     public void studentINFO() {
             System.out.println("Enter your Information:");
-            System.out.println("first name:");
+            System.out.println("first name: ex. Mohammed");
             setFirstName(input.next());
-            System.out.println("last name:");
+            System.out.println("last name: ex. Ali");
             setLastName(input.next());
-            System.out.println("id");
+            System.out.println("id number: ex. s220012345");
             setId(input.next());
-            System.out.println("Your GPA: ");
+            System.out.println("Your GPA: ex. 3.5");
             setGPA(input.nextDouble());
-            System.out.println("birth date: ");
+            System.out.println("birth date: ex. 01/01/2000");
             setBirthDate(input.next());
-            System.out.println("email: ");
+            System.out.println("email: ex. someone@gmail.com");
             setEmail(input.next());
-            System.out.println("phone number: ");
+            System.out.println("phone number: ex. 966512345678");
             setPhoneNumber(input.next());
-            System.out.println("city: ");
+            System.out.println("city: ex. Riyadh");
             setCity(input.next());
-            System.out.println("zip code: ");
+            System.out.println("zip code: ex. 12345");
             setZipCode(input.next());
-            System.out.println("start date: ");
+            System.out.println("start date: ex. 01/01/2022");
             setStartDate(input.next());
         }
 
