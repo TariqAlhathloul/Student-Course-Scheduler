@@ -13,54 +13,40 @@ public class Course {
     private int creditHours;
     private String prerequisite;
     final static String filePathCourse = "InputFiles/CourseINPUT.txt";
-    public Course(String courseCode, String courseName, int creditHours, String prerequisite) {
-        this.courseCode = courseCode;
-        this.courseName = courseName;
-        this.creditHours = creditHours;
-        this.prerequisite = prerequisite;
+    public Course(String courseCode, String courseName,
+                  int creditHours, String prerequisite)
+    {
+        setCourseCode(courseCode);
+        setCourseName(courseName);
+        setCreditHours(creditHours);
+        setPrerequisite(prerequisite);
     }
     // Default constructor
+
     public Course() {
-        this.courseCode = "";
-        this.courseName = "";
-        this.creditHours = 0;
-        this.prerequisite = "";
+        this.courseCode = getCourseCode();
+        this.courseName = getCourseName();
+        this.creditHours = getCreditHours();
+        this.prerequisite = getPrerequisite();
     }
 
-    // Getter and setter methods
-    public String getCourseCode() {
-        return courseCode;
-    }
+    // Getter methods
+    public String getCourseCode() { return courseCode; }
 
-public void setCourseCode(String courseCode) {
-        this.courseCode = courseCode;
-    }
-
-public String getCourseName() {
-        return courseName;
-    }
-
-public void setCourseName(String courseName) {
-        this.courseName = courseName;
-    }
-
-public int getCreditHours() {
-        return creditHours;
-    }
-
-public void setCreditHours(int creditHours) {
-        this.creditHours = creditHours;
-    }
-
-public String getPrerequisite() {
-        return prerequisite;
-    }
-
-public void setPrerequisite(String prerequisite) {
-        this.prerequisite = prerequisite;
-    }
+    public String getCourseName() { return courseName; }
 
 
+    public int getCreditHours() { return creditHours; }
+
+    public String getPrerequisite() { return prerequisite; }
+
+    // Setter methods
+    public void setCourseCode(String courseCode) { this.courseCode = courseCode;}
+    public void setCourseName(String courseName) { this.courseName = courseName; }
+
+    public void setCreditHours(int creditHours) { this.creditHours = creditHours; }
+
+    public void setPrerequisite(String prerequisite) { this.prerequisite = prerequisite; }
 
     // toString method
     public String toString() {
@@ -110,30 +96,34 @@ public void setPrerequisite(String prerequisite) {
 
     }
 
-        private List<Course> enrolledCourses = new ArrayList<>();
-    
-        public void enrollCourse(Course course) {
-            if(enrolledCourses.contains(course)) {
-                System.out.println("You are already enrolled in " + course.getCourseCode());
-                return;
-            }
-            enrolledCourses.add(course);
-            System.out.println("Successfully enrolled in " + course.getCourseCode());
-        }
+     List<Course> enrolledCourses = new ArrayList<>();
 
-        public void unenrollCourse(Course course) {
-            enrolledCourses.remove(course);
-            System.out.println("Successfully unenrolled from " + course.getCourseCode());
+    public void enrollCourse(Course course) {
+        if(enrolledCourses.contains(course)) {
+            System.out.println("You are already enrolled in " + course.getCourseCode());
+            return;
         }
+        enrolledCourses.add(course);
+        System.out.println("Successfully enrolled in " + course.getCourseCode());
+    }
 
-        public String findCourseByCode(String courseCode) {
-            for (Course course : enrolledCourses) {
-                if (course.getCourseCode().equals(courseCode)) {
-                    return courseName;
-                }
-            }
-            return null;
+    public void unenrollCourse(Course course) {
+        if(!enrolledCourses.contains(course)) {
+            System.out.println("You are not enrolled in " + course.getCourseCode());
+            return;
         }
+        enrolledCourses.remove(course);
+        System.out.println("Successfully unenrolled from " + course.getCourseCode());
+    }
+
+    public String findCourseByCode(String courseCode) {
+        for (Course course : enrolledCourses) {
+            if (course.getCourseCode().equals(courseCode)) {
+                return courseName;
+            }
+        }
+        return null;
+    }
     public void displayCourses() {
         Map<String, Map<String, Course>> departments = CourseReader.readCourseData(filePathCourse);
 
