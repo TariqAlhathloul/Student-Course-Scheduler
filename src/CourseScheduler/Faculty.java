@@ -23,7 +23,10 @@ class Faculty extends UniversityMembers {
 
     // method to set the faculty information
     public void facultyINFO() {
-        System.out.println("Enter your Information:");
+        System.out.println("┌───────────────────────────────┐");
+        System.out.println("│     Enter your Information    │");
+        System.out.println("└───────────────────────────────┘");
+
         System.out.println("first name:");
         setFirstName(input.next());
         System.out.println("last name:");
@@ -47,15 +50,20 @@ class Faculty extends UniversityMembers {
 
     // method to display the faculty information
     public void displayFaculty(){
-        System.out.println("First Name: " + getFirstName());
-        System.out.println("Last Name: " + getLastName());
-        System.out.println("ID: " + getId());
-        System.out.println("Office Hours: " + officeHours);
-        System.out.println("Birth Date: " + getBirthDate());
-        System.out.println("Email: " + getEmail());
-        System.out.println("Phone Number: " + getPhoneNumber());
-        System.out.println("City: " + getCity());
-        System.out.println("Zip Code: " + getZipCode());
-        System.out.println("Start Date: " + getStartDate());
+        System.out.println("┌───────────────────────────────┐");
+        System.out.println("│         Faculty Details        │");
+        System.out.println("├───────────────────────────────┤");
+        System.out.println("│   First Name: " + getFirstName() + "         │");
+        System.out.println("│   Last Name: " + getLastName() + "          │");
+        System.out.println("│   ID: " + getId() + "                    │");
+        System.out.println("│   Office Hours: " + officeHours + "      │");
+        System.out.println("│   Birth Date: " + getBirthDate() + "        │");
+        System.out.println("│   Email: " + getEmail() + "               │");
+        System.out.println("│   Phone Number: " + getPhoneNumber() + "  │");
+        System.out.println("│   City: " + getCity() + "                  │");
+        System.out.println("│   Zip Code: " + getZipCode() + "            │");
+        System.out.println("│   Start Date: " + getStartDate() + "        │");
+        System.out.println("└───────────────────────────────┘");
     }
+
 }

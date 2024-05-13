@@ -9,7 +9,7 @@ import java.util.Scanner;
  * subject: IT-245 Project.
  * student name: Tariq Hassan.
  * CRN: 21008.
- * Date: 2024 Arp 24.
+ * Date: 2024 Arp 29.
  * problem selected: Student Course Scheduler.
  * */
 
@@ -53,7 +53,7 @@ public class Main{
         HashMap<String, Faculty> facultyMap = new HashMap<>();
         HashMap<String, List<Course> > studentMap = new HashMap<>();
         Course course = new Course();
-        
+
         Scanner input = new Scanner(System.in);
         int logInOption = 0;
 
@@ -97,7 +97,7 @@ public class Main{
                                 System.out.println("Enter the course code:");
                                 String courseCode = input.next();
                                 Course Ecourse = courseMap.get(courseCode);
-                                if (courseCode != null) {
+                                if (Ecourse != null) {
                                     course.enrollCourse(Ecourse);
                                 } else {
                                     System.out.println("Course not found");
@@ -107,6 +107,14 @@ public class Main{
                             // Unenroll from a course
                             case 5 -> {
                                 System.out.println("Unroll myself from a Course");
+                                System.out.println("Enter the course code:");
+                                String courseCode = input.next();
+                                Course Ucourse = courseMap.get(courseCode);
+                                if (Ucourse != null) {
+                                    course.unenrollCourse(Ucourse);
+                                } else {
+                                    System.out.println("Course not found");
+                                }
                                 break;
                             }
                             // Exit the application

@@ -113,6 +113,10 @@ public void setPrerequisite(String prerequisite) {
         private List<Course> enrolledCourses = new ArrayList<>();
     
         public void enrollCourse(Course course) {
+            if(enrolledCourses.contains(course)) {
+                System.out.println("You are already enrolled in " + course.getCourseCode());
+                return;
+            }
             enrolledCourses.add(course);
             System.out.println("Successfully enrolled in " + course.getCourseCode());
         }
@@ -132,10 +136,19 @@ public void setPrerequisite(String prerequisite) {
         }
     public void displayCourses() {
         Map<String, Map<String, Course>> departments = CourseReader.readCourseData(filePathCourse);
+
+        System.out.println("┌───────────────────────────────────────┐");
+        System.out.println("│          COURSE INFORMATION           │");
+        System.out.println("└───────────────────────────────────────┘");
+
         departments.forEach((department, courses) -> {
-            System.out.println(department + " Department:");
-            courses.values().forEach(System.out::println);
+            System.out.println("┌───────────────────────────────────────┐");
+            System.out.println("│   " + department + " Department:");
+            System.out.println("├───────────────────────────────────────┤");
+            courses.values().forEach(course -> System.out.println("│   " + course));
+            System.out.println("└───────────────────────────────────────┘");
         });
     }
+
 
 }
