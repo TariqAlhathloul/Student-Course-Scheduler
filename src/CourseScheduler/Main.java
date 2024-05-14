@@ -1,15 +1,30 @@
 package CourseScheduler;
 
+import java.io.IOException;
 import java.util.HashMap;
-import java.io.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Map;
 
+/**
+ * Main class for the Course Scheduler application.
+ */
+
+/*
+* Name: Tariq Hassan
+* Date: 2024 April 1
+* subject: IT-245 final project
+**/
 public class Main{
     Scanner input = new Scanner(System.in);
+    // A HashMap to store all the courses with their course code as the key
     static HashMap<String, Course> courseMap = new HashMap<>();
 
+    /**
+     * The main method of the application.
+     * @param args command line arguments
+     * @throws IOException if an I/O error occurs
+     */
     public static void main(String[] args) throws IOException {
 
         // Read the course data and store it in the departments map
@@ -26,10 +41,10 @@ public class Main{
         System.out.println(Messages.welcomeMessage);
         logInOption = input.nextInt();
 
+        // Main loop for the application
         while (logInOption != 0) {
             try {
-
-
+                // Switch case to handle different user options
                 switch (logInOption) {
                     case 1 -> {
                         System.out.println();
@@ -37,8 +52,10 @@ public class Main{
                         Student student = new Student();
                         student.studentINFO();
                         logInOption = input.nextInt();
+                        // Loop for student options
                         while (logInOption != 0) {
                             logInOption = input.nextInt();
+                            // Switch case to handle different student options
                             switch (logInOption) {
                                 case 1 -> {
                                     System.out.println("View Course Schedule");
@@ -99,8 +116,10 @@ public class Main{
                         Faculty faculty = new Faculty();
                         faculty.facultyINFO();
                         logInOption = input.nextInt();
+                        // Loop for faculty options
                         while (logInOption != 0) {
                             logInOption = input.nextInt();
+                            // Switch case to handle different faculty options
                             switch (logInOption) {
                                 case 1 -> {
                                     System.out.println("View Course Schedule");
@@ -147,6 +166,7 @@ public class Main{
             }catch (InputMismatchException e ) {
                 System.out.println("Invalid input");
                 input.next();
+                break;
             }
         }
     }

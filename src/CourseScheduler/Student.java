@@ -1,6 +1,4 @@
 package CourseScheduler;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Student extends UniversityMembers {
@@ -40,7 +38,7 @@ public class Student extends UniversityMembers {
         setGPA(input.nextDouble());
         System.out.println("birth date: ex. 01/01/2000");
         setBirthDate(input.next());
-        System.out.println("email: ex. someone@gmail.com");
+        System.out.println("email: ex. someone@example.com");
         setEmail(input.next());
         System.out.println("phone number: ex. 966512345678");
         setPhoneNumber(input.next());
@@ -61,16 +59,16 @@ public class Student extends UniversityMembers {
         System.out.println("┃    ╔═════════════════════════════════════════════════════╗┃");
         System.out.println("┃    ║                                                     ║┃");
         System.out.println("┃    ║                                                     ║┃");
-        System.out.println("┃    ║          First Name: " + getFirstName() + "         ║┃");
-        System.out.println("┃    ║          Last Name: " + getLastName() + "           ║┃");
-        System.out.println("┃    ║          ID: " + getId() + "                        ║┃");
-        System.out.println("┃    ║          GPA: " + getGPA() + "                      ║┃");
-        System.out.println("┃    ║          Birth Date: " + getBirthDate() + "         ║┃");
-        System.out.println("┃    ║          Email: " + getEmail() + "                  ║┃");
-        System.out.println("┃    ║          Phone Number: " + getPhoneNumber() + "     ║┃");
-        System.out.println("┃    ║          City: " + getCity() + "                    ║┃");
-        System.out.println("┃    ║          Zip Code: " + getZipCode() + "             ║┃");
-        System.out.println("┃    ║          Start Date: " + getStartDate() + "         ║┃");
+        System.out.println("┃    ║          First Name:   " + getFirstName() + "         ║┃");
+        System.out.println("┃    ║          Last Name:    " + getLastName() + "           ║┃");
+        System.out.println("┃    ║          ID:           " + getId() + "                 ║┃");
+        System.out.println("┃    ║          GPA:          " + getGPA() + "                ║┃");
+        System.out.println("┃    ║          Birth Date:   " + getBirthDate() + "          ║┃");
+        System.out.println("┃    ║          Email:        " + getEmail() + "              ║┃");
+        System.out.println("┃    ║          Phone Number: " + getPhoneNumber() + "        ║┃");
+        System.out.println("┃    ║          City:         " + getCity() + "               ║┃");
+        System.out.println("┃    ║          Zip Code:     " + getZipCode() + "            ║┃");
+        System.out.println("┃    ║          Start Date:   " + getStartDate() + "          ║┃");
         System.out.println("┃    ║                                                     ║┃");
         System.out.println("┃    ╚═════════════════════════════════════════════════════╝┃");
         System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");

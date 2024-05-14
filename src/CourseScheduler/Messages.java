@@ -8,7 +8,7 @@ package CourseScheduler;
 public class Messages {
 
     // ASCII art borders
-    static final String border = "┌─────────────────────────────────────┐\n";
+    static final String border =    "┌─────────────────────────────────────┐\n";
     static final String separator = "├─────────────────────────────────────┤\n";
     static final String endBorder = "└─────────────────────────────────────┘\n";
 
@@ -17,11 +17,11 @@ public class Messages {
      * It provides options for the user to log in as a student or a faculty member, or to exit the program.
      */
     static final String welcomeMessage = border +
-            "      WELCOME TO THE COURSE SCHEDULER\n" +
+            "┃     WELCOME TO THE COURSE SCHEDULER ┃\n" +
             separator +
-            "        press 0 to Exit the program\n" +
-            "  press 1 to Log in as an Student\n" +
-            "   press 2 to Log in as a Faculty\n" +
+            "┃ press [0] to Exit the program       ┃\n" +
+            "┃ press [1] to Log in as an Student   ┃\n" +
+            "┃ press [2] to Log in as a Faculty    ┃\n" +
             endBorder;
 
     /**
@@ -30,14 +30,14 @@ public class Messages {
      * enroll in a course, unenroll from a course, or to exit back to the main menu of the program.
      */
     static final String studentMessage = border +
-            "       YOU ARE LOGGED IN AS STUDENT\n" +
+            "┃       YOU ARE LOGGED IN AS STUDENT  ┃\n" +
             separator +
-            "  press 0 to Exit - to COURSE SCHEDULER\n" +
-            "   press 1 to View Course Schedule\n" +
-            "   press 2 to View My Course List\n" +
-            "   press 3 to View My Information\n" +
-            "   press 4 to Enroll myself to a Course\n" +
-            "   press 5 to Unroll myself from a Course\n" +
+            "┃press [0] to Exit COURSE SCHEDULER   ┃\n" +
+            "┃press [1] to View Course Schedule    ┃\n" +
+            "┃press [2] to View My Course List     ┃\n" +
+            "┃press [3] to View My Information     ┃\n" +
+            "┃press [4] Enroll myself to a Course  ┃\n" +
+            "┃press [5] Unroll myself from a Course┃\n" +
             endBorder;
 
     /**
@@ -46,13 +46,13 @@ public class Messages {
      * assign themselves to a course, remove themselves from a course, or to exit back to the main menu of the program.
      */
     static final String facultyMessage = border +
-            "       YOU ARE LOGGED IN AS FACULTY\n" +
+            "┃       YOU ARE LOGGED IN AS FACULTY  ┃\n" +
             separator +
-            "  press 0 to Exit - to COURSE SCHEDULER\n" +
-            "   press 1 to View Course Schedule\n" +
-            "   press 2 to View My Course List\n" +
-            "   press 3 to View My Information\n" +
-            "   press 4 to Assign myself to a Course\n" +
-            "   press 5 to Remove myself from a Course\n" +
+            "┃press [0] to Exit - COURSE SCHEDULER ┃\n" +
+            "┃press [1] to View Course Schedule    ┃\n" +
+            "┃press [2] to View My Course List     ┃\n" +
+            "┃press [3] to View My Information     ┃\n" +
+            "┃press [4] Assign myself to a Course  ┃\n" +
+            "┃press [5] Remove myself from a Course┃\n" +
             endBorder;
 }
