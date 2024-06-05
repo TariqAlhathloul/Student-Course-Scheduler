@@ -1,10 +1,11 @@
 package CourseScheduler;
 
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.InputMismatchException;
-import java.util.Scanner;
 import java.util.Map;
+import java.util.Scanner;
 
 /**
  * Main class for the Course Scheduler application.
@@ -15,6 +16,7 @@ import java.util.Map;
 * Date: 2024 April 1
 * subject: IT-245 final project
 **/
+@SuppressWarnings("unused")
 public class Main{
     Scanner input = new Scanner(System.in);
     // A HashMap to store all the courses with their course code as the key
@@ -168,6 +170,7 @@ public class Main{
                 input.next();
                 break;
             }
+            input.close();
         }
     }
 }
